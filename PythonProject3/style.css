@@ -1,0 +1,166 @@
+/* ===============================
+   Base Styles
+================================== */
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+    color:#fff;
+    font-family:'Segoe UI',sans-serif;
+    background:radial-gradient(ellipse at center,#030b15 0%,#000 100%);
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:repeating-radial-gradient(circle,
+        rgba(255,255,255,.02) 1px,
+        transparent 2px);
+}
+
+/* ===============================
+   Survey
+================================== */
+
+.survey-container{
+    max-width:600px;
+    margin:5vh auto;
+    padding:2rem;
+    color:#fff;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(6px);
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(255,255,255,.08);
+}
+
+.survey-container input[type="radio"]{
+    margin-right:.5rem;
+}
+
+.survey-container button,
+#textMessage button{
+    margin-top:1rem;
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    color:#fff;
+    background:linear-gradient(to right,#e53935,#e35d5b);
+    transition:.3s;
+}
+
+.survey-container button:hover,
+#textMessage button:hover{
+    transform:scale(1.05);
+}
+
+/* ===============================
+   Messages
+================================== */
+
+#thankYouMessage,
+#textMessage{
+    max-width:900px;
+    margin:4rem auto;
+    padding:2rem;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+    border-radius:12px;
+    box-shadow:0 0 30px rgba(255,255,255,.08);
+    text-align:center;
+}
+
+#thankYouMessage{
+    font-size:2rem;
+}
+
+#textMessage{
+    font-size:1.1rem;
+}
+
+/* ===============================
+   Visibility
+================================== */
+
+.hidden{
+    display:none;
+}
+
+.show{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    animation:fadeIn 1s ease forwards;
+}
+
+/* ===============================
+   Tulip
+================================== */
+
+.tulip-image{
+    position:fixed;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+.tulip-image img{
+    width:min(1300px,90vw);
+    height:auto;
+    filter:drop-shadow(0 0 10px rgba(255,255,255,.4));
+}
+
+/* ===============================
+   Fireflies
+================================== */
+
+#fireflyContainer{
+    pointer-events:none;
+}
+
+.firefly{
+    position:fixed;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#fffa80;
+    box-shadow:0 0 12px #fffa80;
+    animation:blink 2.5s infinite alternate ease-in-out;
+    z-index:3;
+}
+
+/* ===============================
+   Animations
+================================== */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes blink{
+    from{
+        opacity:.2;
+        transform:translateY(0);
+    }
+    to{
+        opacity:1;
+        transform:translateY(-10px);
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title ito.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="survey-container">
+
+<div style="text-align:center;">
+    <img src="mmcl.png" alt="Survey Banner" style="max-width:60%;height:auto;margin-bottom:20px;">
+</div>
+
+<h2>Mock Survey</h2>
+
+<p><strong>Title</strong></p>
+<p>Description po ito(1)</p>
+<p>Description po ito(2)</p>
+<p>Description po ito(3)</p>
+
+<h3>Description po ito(4)</h3>
+<p>Description po ito(5)</p>
+
+<form id="surveyForm">
+
+<p><strong>Description po ito(6)</strong></p>
+
+<label>
+    <input type="radio" name="agree" value="Yes" required>
+    Yes
+</label>
+
+<br><br>
+<label><strong>Q1</strong></label><br>
+<label><input type="radio" name="q1" value="Option1Q1" required> Option1Q1</label><br>
+<label><input type="radio" name="q1" value="Option2Q1"> Option2Q1</label><br>
+<br>
+<label><strong>Q2</strong></label><br>
+<label><input type="radio" name="q2" value="Option1Q2" required> Option1Q2</label><br>
+<label><input type="radio" name="q2" value="Option2Q2"> Option2Q2</label><br>
+<label><input type="radio" name="q2" value="Option3Q2"> Option3Q2</label><br>
+<br>
+<label><strong>Q3</strong></label><br>
+<label><input type="radio" name="q3" value="Option1Q3" required> Option1Q3</label><br>
+<label><input type="radio" name="q3" value="Option2Q3"> Option2Q3</label><br>
+<label><input type="radio" name="q3" value="Option3Q3"> Option3Q3</label><br>
+<br>
+<label><strong>Q4</strong></label><br>
+<label><input type="radio" name="q4" value="Option1Q4" required> Option1Q4</label><br>
+<label><input type="radio" name="q4" value="Option2Q4"> Option2Q4</label><br>
+<label><input type="radio" name="q4" value="Option3Q4"> Option3Q4</label><br>
+<br>
+<label><strong>Q5</strong></label><br>
+<label><input type="radio" name="q5" value="Option1Q5" required> Option1Q5</label><br>
+<label><input type="radio" name="q5" value="Option2Q5"> Option2Q5</label><br>
+<label><input type="radio" name="q5" value="Option3Q5"> Option3Q5</label><br>
+<br>
+<label><strong>Q6</strong></label><br>
+<label><input type="radio" name="q6" value="Option1Q6" required> Option1Q6</label><br>
+<label><input type="radio" name="q6" value="Option2Q6"> Option2Q6</label><br>
+<br>
+<label><strong>Q7</strong></label><br>
+<label><input type="radio" name="q7" value="Option1Q7" required> Option1Q7</label><br>
+<label><input type="radio" name="q7" value="Option2Q7"> Option2Q7</label><br>
+<label><input type="radio" name="q7" value="Option3Q7"> Option3Q7</label><br>
+<br>
+<label><strong>Q8</strong></label><br>
+<label><input type="radio" name="q8" value="Option1Q8" required> Option1Q8</label><br>
+<label><input type="radio" name="q8" value="Option2Q8"> Option2Q8</label><br>
+<label><input type="radio" name="q8" value="Option3Q8"> Option3Q8</label><br>
+<br>
+<label><strong>Q9</strong></label><br>
+<label><input type="radio" name="q9" value="Option1Q9" required> Option1Q9</label><br>
+<label><input type="radio" name="q9" value="Option2Q9"> Option2Q9</label><br>
+<label><input type="radio" name="q9" value="Option3Q9"> Option3Q9</label><br>
+<br>
+<label><strong>Q10</strong></label><br>
+<label><input type="radio" name="q10" value="Option1Q10" required> Option1Q10</label><br>
+<label><input type="radio" name="q10" value="Option2Q10"> Option2Q10</label><br>
+<label><input type="radio" name="q10" value="Option3Q10"> Option3Q10</label><br>
+<br>
+
+<button type="submit">Submit</button>
+
+</form>
+</div>
+
+<div id="thankYouMessage" class="hidden">
+    Thank you for answering!
+</div>
+
+<div id="textMessage" class="hidden">
+    <h1>Title ito.</h1>
+    <p>Paragraph po ito.</p>
+    <button onclick="alert('You may now close this site.')">
+        Thank you for reading
+    </button>
+</div>
+
+<div class="tulip-image hidden" id="tulipImage">
+    <img src="tulip.png" id="tulipImageImg" alt="Tulip">
+</div>
+
+<div id="fireflyContainer" class="hidden">
+<div class="firefly" style="top:20%;left:10%;animation-delay:0s;"></div>
+<div class="firefly" style="top:30%;left:30%;animation-delay:1s;"></div>
+<div class="firefly" style="top:40%;left:70%;animation-delay:2s;"></div>
+<div class="firefly" style="top:50%;left:50%;animation-delay:3s;"></div>
+<div class="firefly" style="top:60%;left:50%;animation-delay:3s;"></div>
+<div class="firefly" style="top:65%;left:20%;animation-delay:4s;"></div>
+<div class="firefly" style="top:25%;left:80%;animation-delay:5s;"></div>
+<div class="firefly" style="top:35%;left:60%;animation-delay:6s;"></div>
+<div class="firefly" style="top:75%;left:40%;animation-delay:7s;"></div>
+<div class="firefly" style="top:15%;left:90%;animation-delay:8s;"></div>
+
+</div>
+
+<script>
+document.getElementById("surveyForm").addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    document.querySelector(".survey-container").style.display="none";
+
+    const thank=document.getElementById("thankYouMessage");
+    const text=document.getElementById("textMessage");
+    const tulip=document.getElementById("tulipImage");
+    const fire=document.getElementById("fireflyContainer");
+
+    thank.classList.remove("hidden");
+    thank.classList.add("show");
+
+    setTimeout(function(){
+
+        thank.classList.remove("show");
+        thank.classList.add("hidden");
+
+        tulip.classList.remove("hidden");
+        text.classList.remove("hidden");
+        text.classList.add("show");
+        fire.classList.remove("hidden");
+
+    },2000);
+
+});
+</script>
+
+</body>
+</html>
